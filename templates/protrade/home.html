@@ -1,0 +1,101 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ProTrade</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" media="screen" href="/static/css/reset.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/static/css/style.css">
+<script src="/static/js/jquery-1.7.min.js"></script>
+<script src="/static/js/jquery.easing.1.3.js"></script>
+<script src="/static/js/FF-cash.js"></script>
+<!--[if lt IE 9]>
+<script src="/static/js/html5.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="/static/css/ie.css">
+<![endif]-->
+</head>
+<body>
+<!--==============================header=================================-->
+<header>
+  <div class="main">
+    <div class="wrap">
+      <h1><a href="{% url 'home' %}"><img src="/static/images/protrade_logo.png" alt=""></a></h1>
+     <h2><div class="slogan">Buy Sell Swap Like a Pro</div></h2>
+      <div class="tooltips"> <a href="https://in.linkedin.com/in/vipul-gupta-aka-aim-headshot"><img src="/static/images/icon1.png" alt=""></a><a href="https://www.facebook.com/"><img src="/static/images/icon2.png" alt=""></a><a href="https://github.com/4322vipul"><img src="/static/images/icon3.png" alt=""></a> </div>
+    </div>
+    <div class="nav-shadow">
+      <div>
+        <nav>
+          <ul class="menu">
+            <li class="current"><a href="{% url 'home' %}">&nbsp&nbsp&nbsp&nbsp&nbspHome&nbsp&nbsp&nbsp&nbsp&nbsp</a></li>
+            <li><a href="{% url 'buy' %}">&nbsp&nbsp&nbsp&nbsp&nbspBuy&nbsp&nbsp&nbsp&nbsp&nbsp</a></li>
+            <li><a href="{% url 'sell' %}">&nbsp&nbsp&nbsp&nbsp&nbspSell&nbsp&nbsp&nbsp&nbsp&nbsp</a></li>
+            <li><a href="{% url 'swap' %}">&nbsp&nbsp&nbsp&nbsp&nbspSwap&nbsp&nbsp&nbsp&nbsp&nbsp</a></li>
+            <li><a href="{% url 'contacts' %}">&nbsp&nbsp&nbsp&nbsp&nbspContacts&nbsp&nbsp&nbsp&nbsp&nbsp</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="header-content">
+    <div class="wrap main">
+      <div class="block-1"> <img src="/static/images/buy_final.jpg" alt="" class="img-radius">
+        <div class="border-1">
+          <p class="color-1 p2">Buy an Item</p>
+          <p>You can buy an item that you like by directly calling the seller. Choose an item from the list and buy it wisely.</p>
+          <a href="{% url 'buy' %}" class="button top-1">Buy</a> </div>
+      </div>
+      <div class="block-1"> <img src="/static/images/sell_final.jpg" alt="" class="img-radius">
+        <div class="border-1">
+          <p class="color-1 p2">Sell your used items</p>
+          <p>You can sell your used items that you want to discard,your item will be added to list and then just wait for a call.</p>
+          <a href="{% url 'sell' %}" class="button top-1">Sell</a> </div>
+      </div>
+      <div class="block-1"> <img src="/static/images/swap_final.jpg" alt="" class="img-radius">
+        <div>
+          <p class="color-1 p2">Swap your items</p>
+          <p>If you want to swap your item with other item having similar price, different items will be listed with similar price.</p>
+          <a href="{% url 'swap' %}" class="button top-1">Swap</a> </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!--==============================content================================-->
+<section id="content">
+  <div>
+  <h2 style="color:blue;">Hello! {{ user.username }} welcome to ProTrade</h2>
+
+    <div class="wrap">
+      <div class="col-1 border-2">
+        <h2 class="p3">Scan to download android app</h2>
+        <div class="wrap"> <img src="/static/images/app.png" alt="" class="img-indent img-radius">
+          <p class="extra-wrap">It is a website where one can buy sell or exchange their items very easily. This website is fun, cool and easy to use. All users are registered. We ensure that no one is anonymous on ProTrade.Just select the items and post. Select the item you wish to sell enter its price give your contact number and your item is ready to go. In case you want to remove your item just contact us. No waiting. No need to wait if you want to buy any item just directly talk with the seller. Sell everything here. There is a variety of things you can sell household items, watches, phones, books, and many more things..</p>
+        </div>
+        <div class="wrap top-2">
+          <ul class="list-1 fleft">
+            <li><a href="#">Created by :</a></li>
+            <li><a href="#">Vipul Kumar Gupta</a></li>
+            <li><a href="#">To visit full profile click below</a></li>
+          </ul>
+        </div>
+        <a href="https://in.linkedin.com/in/vipul-gupta-aka-aim-headshot" class="button-1 top-3">Visit Full Profile</a> </div>
+      <div class="col-2">
+        <h2 class="p2">Latest Items</h2>
+        <a href="{% url 'buy' %}" class="link-2">Timer Socket</a>
+        <p class="p4">It is timer socket which disconnects the power automatically. Available at a very low price.</p>
+        <a href="{% url 'buy' %}" class="link-2">Mi A1 mobile</a>
+        <p class="p4">Available in a very nice condition. At affordable price</p>
+        <a href="{% url 'buy' %}" class="link-2">Samsung galaxy mobile</a>
+        <p>Nice condition.Seller is selling at a very low price.</p>
+        <a href="{% url 'buy' %}" class="button-1 top-1">Visit now</a> </div>
+    </div>
+  </div>
+</section>
+<!--==============================footer=================================-->
+<footer>
+  <p>© 2018 <a href="#" class="link">ProTrade</a></p>
+  <p>Phone: +91 800 255 4322 &nbsp; Email: <a href="#" class="link">aimheadshot520@gmail.com</a></p>
+</footer>
+</body>
+</html>
